@@ -53,12 +53,12 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Repositories\FirstRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Services\IRoomService.cs" />
+    <Compile Include="Services\RoomService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
