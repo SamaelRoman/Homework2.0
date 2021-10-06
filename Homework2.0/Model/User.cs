@@ -15,7 +15,7 @@ namespace Homework2._0
         /// <summary>
         ///  Уникальный идентификатор.
         /// </summary>
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         /// <summary>
         /// Имя.
         /// </summary>
@@ -35,7 +35,7 @@ namespace Homework2._0
         /// <summary>
         /// Номер паспорта.
         /// </summary>
-        public string PassportID { get; set; }
+        public string PassportID {get;set; }
         /// <summary>
         /// Дата рождения.
         /// </summary>
@@ -54,6 +54,7 @@ namespace Homework2._0
         /// <param name="DOB">Дата рождения.</param>
         public User(string Name,string Surname, string Patronymic,string PassportID,DateTime DOB)
         {
+            this.Id = Guid.NewGuid();
             this.Name = Name;
             this.Surname = Surname;
             this.Patronymic = Patronymic;

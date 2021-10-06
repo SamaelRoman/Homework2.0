@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application.cs" />
     <Compile Include="Model\ContextDB1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,11 +57,19 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Repositories\FirstRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Services\IReservationInfoService.cs" />
+    <Compile Include="Services\IRoomCategoryService.cs" />
     <Compile Include="Services\IRoomService.cs" />
+    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\ReservationInfoService.cs" />
+    <Compile Include="Services\RoomCategoryService.cs" />
     <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Util\NinjectRegistrations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

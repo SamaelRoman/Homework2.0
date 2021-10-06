@@ -10,6 +10,10 @@ namespace Homework2._0
     public class ReservationInfo
     {
         /// <summary>
+        /// Уникальный идентификатор.
+        /// </summary>
+        public Guid Id { get; set; }
+        /// <summary>
         /// Дата начала бронирования.
         /// </summary>
         public DateTime StartReservation { get; set; }
@@ -42,6 +46,7 @@ namespace Homework2._0
         /// <param name="room">Номер который был забронирован.</param>
         public ReservationInfo(DateTime StartReservation, DateTime EndReservation, User user,Room room)
         {
+            this.Id = Guid.NewGuid();
             this.StartReservation = StartReservation;
             this.EndReservation = EndReservation;
             this.user = user;

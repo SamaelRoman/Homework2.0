@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework2._0.Repositories
 {
-    interface IRepository
+    public interface IRepository
     {
         #region Room CRUD
         /// <summary>
@@ -53,7 +53,7 @@ namespace Homework2._0.Repositories
         /// </summary>
         /// <param name="Id">Id объекта для получения</param>
         /// <returns>Объект класса User</returns>
-        User GetUser(int Id);
+        User GetUser(Guid Id);
         /// <summary>
         /// Редактирование объекта User в базе данных.
         /// </summary>
@@ -63,7 +63,7 @@ namespace Homework2._0.Repositories
         /// Удаляет объект класа User из базы данных по его Id.
         /// </summary>
         /// <param name="Id">Id объекта для удаления.</param>
-        void DeleteUser(int Id);
+        void DeleteUser(Guid Id);
         #endregion
 
         #region RoomCategory CRUD
@@ -82,7 +82,7 @@ namespace Homework2._0.Repositories
         /// </summary>
         /// <param name="Id">Id объекта для получения<</param>
         /// <returns>Объект класса RoomCategory</returns>
-        RoomCategory GetRoomCategory(int Id);
+        RoomCategory GetRoomCategory(Guid Id);
         /// <summary>
         /// Редактирование объекта RoomCategory в базе данных.
         /// </summary>
@@ -92,7 +92,7 @@ namespace Homework2._0.Repositories
         /// Удаляет объект класа RoomCategory из базы данных по его Id.
         /// </summary>
         /// <param name="Id">Id объекта для удаления.</param>
-        void DeleteRoomCategory(int Id);
+        void DeleteRoomCategory(Guid Id);
         #endregion
 
         #region ReservationInfo CRUD
@@ -111,7 +111,7 @@ namespace Homework2._0.Repositories
         /// </summary>
         /// <param name="Id">Id объекта для получения<</param>
         /// <returns>Объект класса ReservationInfo</returns>
-        ReservationInfo GetReservationInfo(int Id);
+        ReservationInfo GetReservationInfo(Guid Id);
         /// <summary>
         /// Редактирование объекта ReservationInfo в базе данных.
         /// </summary>
@@ -121,7 +121,7 @@ namespace Homework2._0.Repositories
         /// Удаляет объект класа ReservationInfo из базы данных по его Id.
         /// </summary>
         /// <param name="Id">Id объекта для удаления.</param>
-        void DeleteReservationInfo(int Id);
+        void DeleteReservationInfo(Guid Id);
         #endregion
     }
 }

@@ -94,6 +94,13 @@ namespace Homework2._0
                 ContextDB1Serializer.Serialize(DBFile, this);
             }
         }
+        public void ClearAll()
+        {
+            ReservationInfos.Clear();
+            RoomCategories.Clear();
+            Rooms.Clear();
+            Users.Clear();
+        }
 
     }
 }
